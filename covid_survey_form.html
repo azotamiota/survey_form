@@ -1,0 +1,133 @@
+<html lang=eng>
+ <style>
+   body {
+     height: 100%;
+     background-image: url("https://www.who.int/images/default-source/mca/mca-covid-19/coronavirus-2.tmb-1366v.jpg");
+     backdrop-filter: blur(5px);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+     margin: 0;
+   }
+   h1 {
+  text-align: center;
+  color: #000000;
+  margin: 1% 10% 0 10%;
+}
+#description {
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+  margin-top: 5px;
+}
+form {
+  font-family: 'Helvetica';
+  width: 600px;
+  border: 5px solid #5F9EA0;
+  padding: 10px;
+  margin: auto;
+  background-color: lightblue;
+  border-radius: 10px;
+}
+
+.form-control {
+    display: block;
+    width: 80%;
+  height: 20px;
+    border-radius: 0.25rem;
+  margin-top: 5px;
+}
+label {
+  display: block;
+}
+.form-group {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+.question {
+  display: block;
+  margin-bottom: 5px;
+}
+#dropdow {
+  margin-top: 0px,
+}
+textarea {
+  border-radius: .3rem;
+  width: 80%;
+}
+p {
+  margin-bottom: 5px;
+  font-size: px;  
+}
+select {
+  overflow: visible;
+}
+</style>
+<body>
+  <form id="survey-form">
+  <h1 id="title">Covid vaccination survey form</h1> 
+  <p id="description">Thank you for providing your details</p>
+    <div class="form-group">
+      <label id="name-label" for="name">Name</label>
+      <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+    </div>
+    <div class="form-group">
+      <label id="email-label">Email</label>
+      <input type="email" id="email"
+         placeholder="Enter your email" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label id="number-label">Age</label>
+      <input type="number" id="number" placeholder="Enter your age" min="12" max="110" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <p>Which option describes your current role?</p>
+      <label>
+        <input value="student" type="radio" name="role">Student</label>
+        <label>
+        <input value="fulltime" type="radio" name="role">Full-time job</label>
+      <label>
+        <input value="parttime" type="radio" name="role">Part-time job</label>
+      <label>
+        <input value="unemployed" type="radio" name="role">Unemployed</label>
+      <label>
+        <input value="retired" type="radio" name="role">Retired</label>
+    </div>
+    <div class="form-group">
+      <p>Which vaccine did you get?</p>
+      <label>
+        <select id="dropdown" name="vaccine" class="form-control" required>
+      <option disabled selected value>Select vaccine</option>
+        <option value="astra">AstraZeneca</option>
+        <option value="pfizer">Pfizer / BioNtech</option>
+        <option value="moderna">Moderna</option>
+        <option value="sputnik">Sputnik</option>
+        <option value="sinopharm">Sinopharm</option>
+          <option value="other">Other</option>
+        <option value="none">None</option>
+        </select>
+     </div>
+  <div class="form-group">
+     <p>What medical conditions have you got?</p>
+    <label>
+      <input name="sickness" type="checkbox" value="highb">High blood pressure</label>
+    <label>
+      <input name="sickness" type="checkbox" value="diab">Diabetes</label>
+    <label>
+      <input name="sickness" type="checkbox" value="cancer">Cancer</label>
+    <label>
+      <input name="sickness" type="checkbox" value="other">Other</label>
+    <label>
+      <input name="sickness" type="checkbox" value="none">None</label>
+    </div>
+   <div class="form-group">
+     <p>Any important information about yourself?</p>
+     <textarea type="text" rows="5" cols="50" placeholder="Enter information here..."></textarea>
+      </div>
+      <div>
+        <input id="submit" type="submit">
+  </form>
+ </body>
+</html>
